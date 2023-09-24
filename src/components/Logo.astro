@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+---
+
+<Image
+  src={logo}
+  width={389}
+  height={389}
+  alt="Raynel Brito"
+  class="rotate w-1/2 sm:w-auto"
+/>
+
+<style>
+  .rotate {
+    animation: rotate 5s normal linear infinite;
+    filter: drop-shadow(0px 0px 10px green);
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotateY(-90deg);
+    }
+    40% {
+      transform: rotateY(-10deg);
+    }
+    60% {
+      transform: rotateY(10deg);
+    }
+    100% {
+      transform: rotateY(90deg);
+    }
+  }
+</style>

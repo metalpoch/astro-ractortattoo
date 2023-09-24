@@ -1,25 +1,21 @@
 ---
 import { Image } from "astro:assets";
-import images from "../constants/gallery";
+import images from "../constants/gallery.ts";
 ---
 
-<section id="gallery">
-  <h1
-    class="max-w-screen-lg mx-auto text-xl sm:text-2xl font-extrabold text-white text-center py-3 px-5"
-  >
-    Algunos de mis trabajos
-  </h1>
-  <article class="flex gap-4 flex-wrap justify-center">
-    {
-      images.map((img, idx) => (
-        <Image
-          src={img}
-          width={595}
-          height={1080}
-          alt={`Tattoo ${idx}`}
-          class="w-36 md:w-48 lg:w-52 rounded-lg border-2 border-slate-500 hover:shadow-md hover:shadow-purple-300 duration-300"
-        />
-      ))
-    }
-  </article>
+<section
+  id="gallery"
+  class="flex gap-4 flex-wrap justify-center animate__animated animate__fadeIn animate__delay-5s animate__slow"
+>
+  {
+    images.map((img, idx) => (
+      <Image
+        src={img}
+        width={595}
+        height={1080}
+        alt={`Tattoo ${idx}`}
+        class="w-32 md:w-48 lg:w-52 rounded-3xl border-2 border-slate-500 hover:shadow-md hover:shadow-purple-300 duration-500"
+      />
+    ))
+  }
 </section>

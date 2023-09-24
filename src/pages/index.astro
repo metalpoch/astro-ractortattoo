@@ -1,20 +1,72 @@
 ---
+import "animate.css";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
+import Logo from "../components/Logo.astro";
+import SocialNetworks from "../components/SocialNetworks.astro";
 import Gallery from "../components/Gallery.astro";
-import Contact from "../components/Contact.astro";
 ---
 
-<Layout title="Ractor Tattoo">
-  <main class="max-w-screen-xl mx-auto mt-20">
-    <Hero />
-    <Gallery />
-    <br />
-    <p
-      class="font-semibold max-w-screen-lg mx-auto px-5 text-extrabold text-center italic"
+<Layout>
+  <main class="max-w-screen-xl mx-auto p-5">
+    <div
+      class="flex flex-wrap md:flex-nowrap gap-5 py-5 items-center justify-center"
     >
-      Te esperamos con las puertas abiertas y las agujas listas.
-    </p>
+      <Logo />
+      <section>
+        <h1
+          class="max-w-screen-lg mx-auto text-xl sm:text-3xl font-extrabold text-white text-center md:text-left animate__animated animate__fadeIn animate__slow"
+        >
+          ¿Estás buscando un tatuaje que refleje tu personalidad y tu estilo?
+        </h1>
+
+        <h2
+          class="text-purple-400 font-extrabold text-lg sm:text-2xl py-5 text-center md:text-left animate__animated animate__fadeInRight animate__delay-2s"
+        >
+          Crearemos el diseño que mejor se adapte a tí
+        </h2>
+
+        <p
+          class="text-slate-200 font-semibold animate__animated animate__fadeInRight animate__delay-4s"
+        >
+          Como tatuador profesional, sé que un tatuaje es una decisión
+          importante que debe tomarse con cuidado. Por eso, me tomo el tiempo de
+          conocer a mis clientes para entender sus deseos y crear un tatuaje que
+          sea verdaderamente significativo para ellos.
+        </p>
+        <br />
+        <p
+          class="text-slate-200 font-semibold animate__animated animate__fadeInRight animate__delay-4s"
+        >
+          Si estás pensando en hacerte un tatuaje, no dudes en contactarme. Te
+          ayudaré a crear un tatuaje que te represente y que te acompañe toda la
+          vida.
+        </p>
+        <br />
+        <p
+          class="font-semibold text-purple-400 max-w-screen-lg mx-auto text-extrabold italic text-center md:text-left animate__animated animate__fadeInRight animate__delay-5s"
+        >
+          Te espero con las puertas abiertas y las agujas listas.
+        </p>
+        <SocialNetworks />
+      </section>
+    </div>
+    <Gallery />
+
+    <h4 class="font-semibold pt-5 max-w-screen-lg mx-auto text-xl text-center">
+      Visitame en mi estudio
+    </h4>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.114186550424!2d-66.8713502!3d10.491663999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5927c56b8b59%3A0xf837011c6d294b3c!2sRactorTattoo!5e0!3m2!1ses!2sve!4v1695594896591!5m2!1ses!2sve"
+      class="w-full pt-1 rounded-lg invert"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </main>
-  <Contact />
+  <footer>
+    <p class="text-sm text-slate-300 text-center">
+      Web design by Keiber Urbila
+    </p>
+  </footer>
 </Layout>
