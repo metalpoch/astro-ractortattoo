@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Gallery from "../components/Gallery.astro";
+import Contact from "../components/Contact.astro";
+---
+
+<Layout title="Ractor Tattoo">
+  <main class="max-w-screen-xl mx-auto mt-20">
+    <Hero />
+    <Gallery />
+    <br />
+    <p
+      class="font-semibold max-w-screen-lg mx-auto px-5 text-extrabold text-center italic"
+    >
+      Te esperamos con las puertas abiertas y las agujas listas.
+    </p>
+  </main>
+  <Contact />
+</Layout>
